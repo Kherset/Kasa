@@ -1,11 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './style/index.css';
-import App from './components/App.js';
+import './index.css';
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Home from "./pages/homepage/home.jsx";
+import Survey from "./pages/survey.jsx";
+import ErrorPage from "./pages/error-page/error-page.jsx";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/Survey",
+    element: <Survey />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
