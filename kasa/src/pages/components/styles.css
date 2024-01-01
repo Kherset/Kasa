@@ -1,0 +1,141 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+  --light-pink: rgb(255, 96, 96);
+}
+
+/** Header **/
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  padding : 50px 100px;
+}
+
+#header-links {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+#homepage-link, #about-link {
+  color: var(--light-pink);
+  text-decoration: none;
+}
+
+#homepage-link:hover, #about-link:hover {
+  text-decoration: underline;
+}
+
+.logo-desktop {
+  width: 200px;
+  height: auto;
+}
+
+/** Banner **/
+.banner {
+    align-items: center;
+    background: url(../../images/imgBanner1.png) center / cover no-repeat;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    margin : 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#banner-slogan {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+}
+
+
+/** Footer **/
+#footer {
+  align-items: center;
+  background-color: black;
+  bottom: 0;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  left: 0px;
+  margin-top: 100px;
+  position: relative;
+  right: 0px;
+}
+
+.logo-desktop-footer {
+  filter: brightness(0) saturate(100%) invert(100%);
+  width: 100px;
+}
+
+#Legal-mentions {
+  color: white;
+}
+
+#copyright-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

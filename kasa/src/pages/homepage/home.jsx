@@ -1,8 +1,14 @@
 import './home.css';
+import Header from "../components/Header.jsx";
+import Banner from "../components/Banner.jsx";
+import Footer from "../components/Footer.jsx";
 
 function Home() {
-  return (
-    <h1> Coucou </h1>
+  return ( <div>
+    <Header />
+    <Banner />
+    <Footer />
+    </div>
   );
 }
 
