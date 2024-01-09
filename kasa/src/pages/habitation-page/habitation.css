@@ -1,0 +1,10 @@
+.habitation-content {
+  margin: 50px 100px;
+  height: auto;
+}
+
+.dropdown-menus {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

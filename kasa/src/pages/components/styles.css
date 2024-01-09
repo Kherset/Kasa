@@ -109,6 +109,35 @@ table {
   position: absolute;
 }
 
+/** Accommodations **/
+#accommodations-container {
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  height: auto;
+  margin: 50px 100px 0 100px;
+  padding: 50px;
+  width: auto;
+}
+
+.accommodations-item {
+  background-color: var(--light-pink);
+  border-radius: 10px;
+  box-shadow: inset 0px -90px 60px -60px rgba(0, 0, 0, 0.6);
+  height: 300px;
+  position: relative;
+}
+
+.accommodations-item-title {
+  bottom: 0;
+  color: white;
+  font-weight: 200;
+  left: 10px;
+  position: absolute;
+  right: 10px;
+}
 
 /** Footer **/
 #footer {
@@ -138,4 +167,133 @@ table {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/** Error **/
+
+.error-section {
+  align-items: center;
+  color: var(--light-pink);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#error-number {
+  font-size: 300px;
+  margin: 0;
+}
+
+#error-text {
+  font-size: 30px;
+  margin: 40px;
+}
+
+#error-homepage-link{
+  color: var(--light-pink);
+  font-size: small;
+  text-decoration: underline;
+  margin: 30px;
+}
+
+/** Dropdown Menu **/
+.dropdown {
+  width: 45%;
+}
+
+.dropdown-button {
+  align-items: center;
+  background-color: var(--light-pink);
+  border-radius: 10px;
+  color: #F6F6F6;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.dropdown-content {
+  background-color: #F6F6F6;
+  display: block;
+  padding: 10px;
+  margin-top: -4px;
+}
+
+.dropdown-item {
+  color: var(--light-pink);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+/** HabitationHeader **/
+
+.title-and-localisation {
+  color: var(--light-pink);
+}
+
+.habitation-header-tags-container {
+  display: flex;
+  margin: 10px 0 20px ;
+  width: 100%;
+}
+
+.habitation-header-title {
+  margin: 0 0 5px;
+}
+
+.habitation-header-tag {
+  background-color: var(--light-pink);
+  border-radius: 5px;
+  color: white;
+  margin-right: 10px;
+  padding: 2px 20px;
+}
+
+.habitation-header {
+  display: flex;
+}
+
+.habitation-informations {
+  width: 80%;
+}
+
+.profil-and-rating {
+  width: 20%;
+}
+
+.profil-img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.renter {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.renter-identity {
+  margin-right: 10px;
+}
+
+.name {
+  color: var(--light-pink);
+  margin: 5px 0;
+  text-align: end;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.fa-star {
+  color: #E3E3E3;
+  margin-left: 10px;
+}
+
+.fa-star-colored {
+  color: var(--light-pink);
 }
