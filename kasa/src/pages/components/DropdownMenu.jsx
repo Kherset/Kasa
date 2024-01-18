@@ -1,28 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-
-
-
-const DropdownMenu = (props) => {
+const DropdownMenu = ({children, title, widthMobile, widthDesktop}) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  return (
-    <div className="dropdown">
-      <div className="dropdown-button" onClick={toggleMenu}>
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
-        <h4 className='dropdown-title'>{props.content} </h4>
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const getWidth = () => {
+    return windowWidth >= 600 ? widthDesktop : widthMobile;
+  };
+
+
+  return (
+    <div className="dropdown" style={{ width: getWidth() }}>
+      <div className="dropdown-button" onClick={toggleMenu}>
+        <h4 className='dropdown-title'>{title}</h4>
         <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
       </div>
       {isOpen && (
         <div className="dropdown-content">
-          <span className='dropdown-item'> Element 1 </span>
-          <span className='dropdown-item'> Element 2 </span>
-          <span className='dropdown-item'> Element 3 </span>
+
+        {children}
         </div>
       )}
     </div>

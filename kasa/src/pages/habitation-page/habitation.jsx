@@ -1,19 +1,32 @@
-import './habitation.css';
+import "../components/styles.css";
 import Header from "../components/Header.jsx";
-import Banner from "../components/Banner.jsx";
+import Carousel from "../components/Carousel.jsx";
 import Footer from "../components/Footer.jsx";
 import DropdownMenu from "../components/DropdownMenu.jsx";
 import HabitationHeader from "../components/HabitationHeader.jsx";
+import { useParams } from 'react-router-dom';
+import accommodations from '../../datas/accommodations.json';
+
 
 function Habitation() {
+
+  const { id } = useParams();
+  const renterFounded = accommodations.find(renter => renter.id === id)
+
   return ( <div>
     <Header />
-    <Banner />
+    <Carousel images={renterFounded.pictures}/>
     <div className='habitation-content'>
-    <HabitationHeader />
+    <HabitationHeader renterFounded={renterFounded}/>
       <div className='dropdown-menus'>
-        <DropdownMenu content='Description'/>
-        <DropdownMenu content="Equipement"/>
+        <DropdownMenu title='Description' widthMobile="auto" widthDesktop='45%' >
+          <span className='dropdown-item'> {renterFounded.description} </span>
+        </DropdownMenu>
+        <DropdownMenu title="Equipement" widthMobile="auto" widthDesktop='45%'>
+        { renterFounded && renterFounded.equipments.map((equipment, index) => (
+        <span key={index} className='dropdown-item'>{equipment}</span>
+      ))}
+        </DropdownMenu>
       </div>
     </div>
     <Footer />

@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import "./error-page.css";
+import "../components/styles.css";
 import Header from "../components/Header.jsx";
 import Error from "../components/Error.jsx";
 import Footer from "../components/Footer.jsx";

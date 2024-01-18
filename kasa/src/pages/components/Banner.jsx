@@ -1,10 +1,13 @@
 import './styles.css'
 
 
-function Banner() {
-  return ( <section className='banner' id='banner'>
-        <h2 id='banner-slogan'>Chez vous, partout et ailleurs</h2>
+function Banner({imageURL, children}) {
+  const bannerImg = {
+    background: `url(${imageURL}) center / cover no-repeat`,
+  };
+  return ( <section className='banner' id='banner' style={bannerImg}>
+        <h2 id='banner-slogan'> {children} </h2>
     </section>
   )
 }
-export default Banner
+export default Banner;
