@@ -1,11 +1,11 @@
+import accommodations from '../../datas/accommodations.json';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles.css';
-import accommodations from '../../datas/accommodations.json';
 
 const AccommodationCard = ({ title, style }) => (
   <div className="accommodations-item" style={style}>
-      <h4 className='accommodations-item-title'>{title}</h4>
+    <h4 className='accommodations-item-title'>{title}</h4>
   </div>
 );
 

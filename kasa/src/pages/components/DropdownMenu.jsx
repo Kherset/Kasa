@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const DropdownMenu = ({children, title, widthMobile, widthDesktop}) => {
+const DropdownMenu = ({ children, title, widthMobile, widthDesktop }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -23,18 +23,17 @@ const DropdownMenu = ({children, title, widthMobile, widthDesktop}) => {
   const getWidth = () => {
     return windowWidth >= 600 ? widthDesktop : widthMobile;
   };
-
+  const iconClass = `fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`;
 
   return (
     <div className="dropdown" style={{ width: getWidth() }}>
       <div className="dropdown-button" onClick={toggleMenu}>
         <h4 className='dropdown-title'>{title}</h4>
-        <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+        <i className={iconClass}></i>
       </div>
       {isOpen && (
         <div className="dropdown-content">
-
-        {children}
+          {children}
         </div>
       )}
     </div>
