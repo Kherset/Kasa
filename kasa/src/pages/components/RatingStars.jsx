@@ -5,6 +5,8 @@ function RatingStars({ score }) {
     <i key={index + 1} className={`fa-solid fa-star ${index < score ? 'fa-star-colored' : ''}`}></i>
   ));
 
+
+
   return (
     <div className='rating'>
       <span>{stars}</span>

@@ -65,7 +65,7 @@ table {
   text-decoration: none;
 }
 
-#homepage-link:hover, #about-link:hover {
+#header-links a.active {
   text-decoration: underline;
 }
 
