@@ -20,21 +20,15 @@ function Habitation() {
         <div className="dropdown-menus">
           <DropdownMenu
             title="Description"
-            widthMobile="auto"
-            widthDesktop="45%"
-          >
-            <span className="dropdown-item"> {renterFounded.description} </span>
-          </DropdownMenu>
-          <DropdownMenu
-            title="Equipement"
-            widthMobile="auto"
-            widthDesktop="45%"
-          >
+            children={renterFounded.description}
+          ></DropdownMenu>
+
+          <DropdownMenu title="Equipement">
             {renterFounded &&
               renterFounded.equipments.map((equipment, index) => (
-                <span key={index} className="dropdown-item">
+                <li key={index} className="dropdown-item">
                   {equipment}
-                </span>
+                </li>
               ))}
           </DropdownMenu>
         </div>
