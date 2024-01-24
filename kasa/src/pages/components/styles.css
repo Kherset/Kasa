@@ -326,6 +326,7 @@ table {
 .dropdown-button {
   align-items: center;
   display: flex;
+  font-weight: bolder;
   height: 50px;
   margin-bottom: 30px;
   justify-content: space-between;
