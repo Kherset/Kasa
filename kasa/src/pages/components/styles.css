@@ -136,7 +136,7 @@ table {
 
 #homepage-link,
 #about-link {
-  color: var(--light-pink);
+  color: black;
   text-decoration: none;
 }
 
@@ -286,7 +286,7 @@ table {
 }
 
 .dropdown.open {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   transition: margin-bottom 0.5s ease;
 }
 
@@ -332,6 +332,10 @@ table {
   justify-content: space-between;
 }
 
+.dropdown-title {
+  font-size: 20px;
+}
+
 .dropdown-content {
   background: #fff;
   box-sizing: border-box;
@@ -344,6 +348,10 @@ table {
   position: absolute;
   top: 50px;
   width: 100%;
+}
+
+.dropdown-item {
+  margin-bottom: 5px;
 }
 
 i.fa-chevron-up {
@@ -364,6 +372,10 @@ i.fa-chevron-up {
 
 .title-and-localisation {
   color: var(--light-pink);
+}
+
+.habitation-header-localisation {
+  color: black;
 }
 
 .habitation-header-tags-container {
